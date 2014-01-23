@@ -1,4 +1,4 @@
-.profile {
+.quote-box {
 	margin-top: 25px;
 	border: 3pt solid #000;
 }
@@ -15,4 +15,15 @@ form input {
 
 .input-form {
 	display: none;
+}
+
+#quote {
+
+}
+
+#author {
+	list-style-type: none;
+	font-style: italic;
+	font-size: .9em;
+	color: #939292;
 }

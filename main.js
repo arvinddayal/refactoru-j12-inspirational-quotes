@@ -7,21 +7,19 @@ var load = function() {
 
 	$('#editor').on('click', toggleInput); 
 
-	var updateName = function() {
-		var x = $('#quote-input').val();
-		$('#quote').text(x);
+
+	var getNewQuote = function() {
+		$("#quote-list").append($("<li>" + $('#quote-input').val() + "<br />" + "<span>" + $('#author-input').val() + "</span>" + "</li>"));
 	};
-	
-	var updateBio = function() {
-		var x = $('#author-input').val();
-		$('#author').text(x);
-	};	
+
+	// var createQuote = function() {
+	// 	getNewQuote();
+	// };
 
 
-	$('#submit-changes').click(function(event) {
-		updateName();
-		updateBio();
-		event.preventDefault();	
+	$('#quote-form').submit(function(event) {
+		event.preventDefault();
+		getNewQuote();
 	});
 
 
@@ -30,3 +28,24 @@ var load = function() {
 };
 
 $(document).on('ready', load);
+
+
+	// $('#submit-changes').click(function(event) {
+	// 	updateQuote();
+	// 	updateAuthor();
+	// 	event.preventDefault();	
+	// });
+
+
+	// var updateQuote = function() {
+	// 	var x = $('#quote-input').val();
+	// 	$('#quote').text(x);
+	// };
+	
+	// var updateAuthor = function() {
+	// 	var x = $('#author-input').val();
+	// 	$('#author').text(x);
+	// };	
+
+
+	
