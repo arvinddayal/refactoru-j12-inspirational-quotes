@@ -9,19 +9,20 @@ var load = function() {
 
 
 	var getNewQuote = function() {
-		$("#quote-list").append($("<li>" + $('#quote-input').val() + "<br />" + "<span>" + $('#author-input').val() + "</span>" + "</li>"));
+		$("#quote-list").append($("<li>" + $('#quote-input').val() + "<br />" + "<span class='author-item'>" + '&mdash; ' + $('#author-input').val() + "</span>" + "<button type='button' class='delete-button'>Delete</button>" + "</li>"));
+
 	};
 
-	// var createQuote = function() {
-	// 	getNewQuote();
-	// };
+
+	$(document).on("click",".delete-button",function() {
+		$(this).parent().remove();
+	});
 
 
 	$('#quote-form').submit(function(event) {
 		event.preventDefault();
 		getNewQuote();
 	});
-
 
 
 
@@ -47,5 +48,7 @@ $(document).on('ready', load);
 	// 	$('#author').text(x);
 	// };	
 
-
+	// var createQuote = function() {
+	// 	getNewQuote();
+	// };
 	

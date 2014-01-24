@@ -17,11 +17,7 @@ form input {
 	display: none;
 }
 
-#quote {
-
-}
-
-#author {
+.author-item {
 	list-style-type: none;
 	font-style: italic;
 	font-size: .9em;
